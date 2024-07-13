@@ -1,38 +1,55 @@
 from livre import ajouterLivre, aficher_livres, rechercherLivre , suprimer_ou_archiver
-from utilisateur import mange_users
-
-def menu_principal():
-    print("1. ajouter un livre \n")
-    print("2. Rechercher un livre \n")
-    print("3. suprimer un livre \n")
-    print("4. Afficher le livre \n") 
-    print("5. Emprunter un livre \n")
-    print("6. Retournez un livre \n")
-    print("7. Ajouter un nouvel utilisateur")
-    print("8. Quiter \n")
-    choix = int(input("selectionez une option : "))
+import utilisateur
+def menu():
+    print("1. Ajouter un livre")
+    print("2. Chercher un livre")
+    print("3. Supprimer un livre")
+    print("4. Afficher les livres")
+    print("5. Emprunter un livre")
+    print("6. Retourner un livre")
+    print("7. Afficher l'historique")
+    print("8. Vérifier les retards")
+    print("9. Ajouter un utilisateur")
+    print("10. Supprimer un utilisateur")
+    print("11. Lister tous les utilisateurs")
+    print("12. Quitter le programme\n")
+    choix = int(input("\tSélectionner une option : "))
     return choix
-    
-def main (): 
+
+def main():
     while True:
-        choix = menu_principal()
-        if choix == 1: 
-            ajouterLivre()
-        elif choix == 2: 
-            rechercherLivre()
-        elif choix == 3: 
-            suprimer_ou_archiver()
-        elif choix == 4: 
-            aficher_livres()
-        elif choix == 5: 
-            print('')
-        elif choix == 6: 
-            print('')
-        elif choix == 7 : 
-           mange_users()
-        elif choix ==  8:
-            break 
-            
+        choix = menu()
+        if choix == 1:
+            livre.ajouterLivre()
+        elif choix == 2:
+            livre.rechercherLivre()
+        elif choix == 3:
+            livre.supprimerLivre()
+        elif choix == 4:
+            livre.afficherLivres()
+        elif choix == 5:
+            livre.emprunterLivre()
+        elif choix == 6:
+            livre.retournerLivre()
+        elif choix == 7:
+            livre.afficherHistorique()
+        elif choix == 8:
+            livre.verifierRetards()
+        elif choix==12:
+            break
+        elif choix == 9:
+            utilisateur.ajouterUtilisateur()
+        elif choix == 10:
+            utilisateur.supprimerUtilisateur()
+        elif choix == 11:
+            utilisateur.listerUtilisateurs()
+        else:
+            print("Veuillez choisir une option valide\n")
+
         
+       
+
 if __name__ == "__main__":
     main()
+
+
