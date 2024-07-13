@@ -1,0 +1,62 @@
+Rapport sur le Code de Gestion de Bibliothèque
+
+Participants:
+- **Albaty Ramazani Prince**
+- **Alphonse Roger Manara**
+- **Bakuba Molisho Brunel**
+
+Fonctionnalités du Code
+
+Ce code implémente un système de gestion de bibliothèque avec les fonctionnalités suivantes :
+
+1.Ajout de livre**: Ajouter de nouveaux livres dans la bibliothèque.
+
+2.Recherche de livre**: Rechercher des livres selon différents critères (auteur, titre, genre, disponibilité).
+
+3.Suppression de livre**: Supprimer des livres de la bibliothèque.
+
+4.Affichage des livres**: Afficher tous les livres disponibles dans la bibliothèque.
+
+5.Emprunt de livre**: Emprunter des livres (fonction non implémentée).
+
+6.Retour de livre**: Retourner des livres empruntés (fonction non implémentée).
+
+7.Affichage de l'historique**: Afficher l'historique des emprunts (fonction non implémentée).
+
+8.Vérification des retards**: Vérifier les retards de retour de livres (fonction non implémentée).
+
+9.Gestion des utilisateurs**: Ajouter, supprimer et lister des utilisateurs.
+
+Modules et Fonctions
+
+Module `menu`
+-menu(): Affiche le menu principal et capture le choix de l'utilisateur.
+
+Module `main`
+
+-main(): Boucle principale qui appelle les fonctions appropriées en fonction du choix de l'utilisateur.
+
+Module `livre`
+
+-ajouterLivre(): Ajoute un livre à la bibliothèque après validation des informations.
+
+-afficherLivres(): Affiche tous les livres présents dans la bibliothèque.
+-rechercherLivre(): Recherche des livres selon différents critères.
+-rechercherParAuteur(livres): Recherche par auteur.
+-rechercherParTitre(livres): Recherche par titre.
+-rechercherParGenre(livres): Recherche par genre.
+-rechercherParDisponibilite(livres)**: Recherche par disponibilité.
+-afficherLivresTrouves(livres)**: Affiche les livres trouvés selon les critères de recherche.
+-supprimerLivre(): Supprime un livre de la bibliothèque.
+-archiverLivre(): Archive un livre (le rend indisponible).
+-supprimer_ou_archiver(): Demande à l'utilisateur s'il souhaite supprimer ou archiver un livre.
+
+Module `utilisateur`
+
+-save_user(user): Sauvegarde un utilisateur dans le fichier JSON.
+-create_user(): Crée un nouvel utilisateur après validation des informations.
+-show_all_users(): Affiche tous les utilisateurs enregistrés.
+-deleteUser(): Supprime un utilisateur de la bibliothèque.
+-choice_to_manage_users()**: Affiche un menu pour gérer les utilisateurs et capture le choix de l'utilisateur.
+-manage_users(): Gère les utilisateurs selon le choix de l'utilisateur.
+
